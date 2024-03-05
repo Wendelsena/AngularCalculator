@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule, /*Módulo para conectar o formulário ao código do seu app (controla a entrada de dados)*/
   ],
   providers: [],
   bootstrap: [AppComponent]
