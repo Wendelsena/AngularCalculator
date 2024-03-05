@@ -1,7 +1,11 @@
 <form>
     <input type="number" [(ngModel)]="num1" name="num1"> <!--  [(ngModel)]="num1" está dando um valor a variavel num dentro de ts (precisa ter o formsModel configurado) -->
     <input type="number" [(ngModel)]="num2" name="num2">
-    <button>Sum</button>
+    <button (click)="onClickSum()">Sum</button>
+
+    <!-- {{sum}} Binding de uma via (Interpolação) -->
+    <!-- [(ngModel)] Binding de duas vias (da classe para o template e do template para classe) -->
+    <!--(click)="onClickSum()" Binding de evento () -->
 
     <!-- {{sum}} está puxando o valor dado a ele em ts -->
     {{sum}}

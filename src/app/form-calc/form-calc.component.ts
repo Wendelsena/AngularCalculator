@@ -11,4 +11,9 @@ export class FormCalcComponent {
   num2: number = 0;
   sum: number = 0;
 
+  /*Método de soma*/
+  onClickSum() {
+    this.sum = this.num1 + this.num2;
+  }
+
 }
