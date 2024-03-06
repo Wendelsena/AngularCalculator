@@ -3,9 +3,13 @@
   <input type="number" [(ngModel)]="num2" name="num2">
   <button (click)="selectedOperator = '+'">+</button>
   <button (click)="selectedOperator = '-'">-</button>
-  <button (click)="selectedOperator = 'x'">x</button>
-  <button (click)="selectedOperator = '/'">/</button>
+  <button (click)="selectedOperator = 'x'">&times;</button>
+  <button (click)="selectedOperator = '/'">÷</button>
   <button (click)="onClickEqual()">=</button>
+
+  <!-- Exibindo os valores de num1 e num2 em tempo real -->
+  <p>Num1: {{ num1 }}</p>
+  <p>Num2: {{ num2 }}</p>
 
   <!-- Remova a exibição direta do resultado do HTML -->
   <p>Result: {{ equal }}</p>
