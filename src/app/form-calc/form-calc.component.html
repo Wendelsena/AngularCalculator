@@ -4,29 +4,30 @@
       <h2>Calculator</h2>
     </div>
     <div class="operations">
-        <div class="prev-calc"> 45 + 45</div>
-        <div class="atual-calc">45</div>
+        <div class="prev-calc">{{lastOperation}}</div>
+        <div class="atual-calc">{{currentOperation}}</div>
     </div>
     <div class="btn-container">
-          <button>CE</button>
-          <button>C</button>
-          <button>DEL</button>
-          <button (click)="selectedOperator = '/'">÷</button>
-          <button class="number">7</button>
-          <button class="number">8</button>
-          <button class="number">9</button>
-          <button (click)="selectedOperator = 'x'">&times;</button>
-          <button class="number">4</button>
-          <button class="number">5</button>
-          <button class="number">6</button>
-          <button (click)="selectedOperator = '-'">-</button>
-          <button class="number">1</button>
-          <button class="number">2</button>
-          <button class="number">3</button>
-          <button (click)="selectedOperator = '+'">+</button>
-          <button class="number">.</button>
-          <button class="number">0</button>
-          <button class="equal" (click)="onClickEqual()">=</button>
+      <button (click)="addToDisplay('CE')">CE</button>
+      <button (click)="addToDisplay('C')">C</button>
+      <button (click)="addToDisplay('DEL')">DEL</button>
+      <button (click)="addToDisplay('÷')">÷</button>
+      <button (click)="addToDisplay('7')" class="number">7</button>
+      <button (click)="addToDisplay('8')" class="number">8</button>
+      <button (click)="addToDisplay('9')" class="number">9</button>
+      <button (click)="addToDisplay('*')">&times;</button>
+      <button (click)="addToDisplay('4')" class="number">4</button>
+      <button (click)="addToDisplay('5')" class="number">5</button>
+      <button (click)="addToDisplay('6')" class="number">6</button>
+      <button (click)="addToDisplay('-')">-</button>
+      <button (click)="addToDisplay('1')" class="number">1</button>
+      <button (click)="addToDisplay('2')" class="number">2</button>
+      <button (click)="addToDisplay('3')" class="number">3</button>
+      <button (click)="addToDisplay('+')">+</button>
+      <button (click)="addToDisplay('.')">.</button>
+      <button (click)="addToDisplay('0')" class="number">0</button>
+      <button (click)="addToDisplay('=')" class="equal">=</button>
+
     </div>
   </div>
 </div>

@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormCalcComponent } from './form-calc/form-calc.component';
 import { FormsModule } from '@angular/forms';
-import { KeyboardComponent } from './keyboard/keyboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormCalcComponent,
-    KeyboardComponent
   ],
   imports: [
     BrowserModule,
