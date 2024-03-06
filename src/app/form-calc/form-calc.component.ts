@@ -10,7 +10,7 @@ export class FormCalcComponent {
   num2: number = 0;
   equal: any;
   selectedOperator: any;
-  
+
   onClickEqual(): void {
     // Verifica se os números foram fornecidos antes de calcular o resultado
     if (this.num1 !== null && this.num2 !== null) {
