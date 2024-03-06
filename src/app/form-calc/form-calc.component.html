@@ -1,11 +1,12 @@
 <form>
   <input type="number" [(ngModel)]="num1" name="num1">
   <input type="number" [(ngModel)]="num2" name="num2">
-  <button (click)="onClickSum()">+</button>
-  <button (click)="onClickDifference()">-</button>
-  <button (click)="onClickProduct()">x</button>
-  <button (click)="onClickQuotient()">/</button>
+  <button (click)="selectedOperator = '+'">+</button>
+  <button (click)="selectedOperator = '-'">-</button>
+  <button (click)="selectedOperator = 'x'">x</button>
+  <button (click)="selectedOperator = '/'">/</button>
   <button (click)="onClickEqual()">=</button>
 
+  <!-- Remova a exibição direta do resultado do HTML -->
   <p>Result: {{ equal }}</p>
 </form>
