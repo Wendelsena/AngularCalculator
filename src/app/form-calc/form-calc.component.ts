@@ -3,35 +3,35 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-form-calc',
   templateUrl: './form-calc.component.html',
-  styleUrl: './form-calc.component.css'
+  styleUrls: ['./form-calc.component.css']
 })
-/*está classe executa as ações e guarda os objetos*/
 export class FormCalcComponent {
   num1: number = 0;
   num2: number = 0;
-  sum: number = 0;
-  difference: number = 0;
-  product: number = 0;
-  Quotient: number = 0;
+  equal: number = 0;
 
-  /*Método de soma*/
-  onClickSum() {
-    this.sum = this.num1 + this.num2;
+  onClickSum(): void {
+    this.equal = this.num1 + this.num2;
   }
 
-   /*Método de subtração*/
-  onClickDifference() {
-    this.sum = this.num1 - this.num2;
+  onClickDifference(): void {
+    this.equal = this.num1 - this.num2;
   }
 
-   /*Método de multiplicação*/
-  onClickProduct () {
-    this.sum = this.num1 * this.num2;
+  onClickProduct(): void {
+    this.equal = this.num1 * this.num2;
   }
 
-   /*Método de divisão*/
-  onClickQuotient() {
-    this.sum = this.num1 / this.num2;
+  onClickQuotient(): void {
+    if (this.num2 !== 0) {
+      this.equal = this.num1 / this.num2;
+    } else {
+      this.equal = NaN; // Tratamento de divisão por zero
+    }
   }
 
+  onClickEqual(): void {
+    // Exibir uma mensagem quando o botão de igual é clicado
+    alert("Botão de igual foi clicado!");
+  }
 }
